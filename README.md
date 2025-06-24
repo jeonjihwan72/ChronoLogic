@@ -2,21 +2,69 @@
 
 ## Content
 1. [Overview](#1-overview)
-2. [Project Introduction](#2-project-introduction)
-3. [Requirements Definition](#3-requirements-definition)
-4. [System Design](#4-system-design)
-5. [Implementation Detail](#5-implementation-detail)
-6. [Improvements](#6-improvements)
+2. [Requirements Definition](#2-requirements-definition)
+3. [System Design](#3-system-design)
+4. [Testing & Validation](#4-testing--validation)
+5. [Improvements](#5-improvements)
 
 ## 1. Overview
 
-## 2. Project Introduction
+This project was carried out as part of a junior-year course assignment in the Department of Computer Engineering at Hanbat National University, and was entirely researched and developed individually.
+The main objective is to implement a hardware-based alarm clock system using Verilog HDL.
 
-## 3. Requirements Definition
+Beyond the basic alarm functionality, the system introduces an interactive feature where the user must press a button a certain number of times to deactivate the alarm, encouraging a more active response compared to conventional alarm systems.
 
-## 4. System Design
+Key components include an FND (Flexible Numeric Display) array for time display, a piezo buzzer for melody playback, and logic circuits for time comparison and alarm cancellation. The project was fully implemented on an FPGA board, achieving a complete hardware-level realization.
 
-### System Architecture
+Rather than targeting a specific user group or commercial application, the purpose of this project is to deepen understanding of digital logic design and practice real-world hardware control using Verilog-based development.
+
+## 2. Requirements Definition
+
+### · Functional Requirements
+
+1. The system shall provide a clock function.
+2. The system shall provide an alarm function.
+3. The system shall play a melody using piezo buzzer when the alarm time is reached.
+4. The system shall require a mission to be completed in order to deactivate the alarm.
+5. The system shall allow the user to switch between clock mode and alarm mode.
+6. The system shall allow the user to view the current time.
+7. The system shall allow the user to set the initial current time.
+8. The system shall allow the user to deactivate the alarm.
+
+### · Non-functional Requirements
+
+1. The system shall operate in real-time.
+2. The system shall operate with low power consumption.
+3. The user interface shall be intuitive and easy to use.
+4. The system shall maintain stable operation for extended periods.
+
+### · Use Case
+
+| 항목 | 내용  |
+| --- | --- |
+| **Use Case Name** | Operate Alarm Clock System |
+| **Actor** | User |
+| **Description** | The user interacts with the alarm clock system to view and set the current time, configure an alarm, and deactivate the alarm by completing a mission. The system functions in real time with intuitive controls. |
+| **Preconditions** | - The system is powered on and initialized<br>- The user has access to input controls (e.g., buttons or switches) |
+| **Postconditions** | - Time is correctly displayed and updated<br>- Alarms are set and triggered properly<br>- The alarm is deactivated upon mission |
+
+#### ✅ Main Flow (Basic Scenario)
+
+1. The user powers on the system.
+2. The system displays the current time on the FND.
+3. The user switches to "alarm mode".
+4. The user sets the desired alarm time.
+5. The system stores the alarm time and switches back to clock mode.
+6. The system continuously compares current time with alarm time (real-time operation).
+7. When the alarm time is reached:
+    - The system activates the piezo buzzer to play a melody.
+    - The system requires the user to complete a mission (e.g., pressing a button multiple times).
+8. The user performs the mission.
+9. Upon successful mission completion, the system deactivates the alarm and returns to normal clock mode.
+
+## 3. System Design
+
+### · System Architecture
 
 ![clock_architecture](./Attached_files/architecture.png)
 
@@ -35,11 +83,23 @@
 10. ALARM_FND.v : Display alarm time currently being set with FND Array
 11. ALARM_DISABLE.v : Control function to deactivate the alarm
 
-### Stack
+### · Stack
 
  <!-- Verilog HDL -->
 ![verilog hdl](https://img.shields.io/badge/Verilog_HDL-90EE90?style=flat-square&logo=StackOverflow&logoColor=black)
 
-## 5. Implementation Detail
+## 4. Testing & Validation
 
-## 6. Improvements
+The system was tested using FPGA equipment provided by the Hanbat National University.
+Key test scenarios included:
+
+- Verifying that the Character LCD correctly displays the current time in clock mode.
+- Ensuring the alarm triggers at the configured time and plays the melody.
+- Confirming that the alarm is deactivated only after pressing the button 10 times.
+- Checking mode switching between clock and alarm modes.
+
+All test cases passed under normal operating conditions, and the system remained stable during extended operation.
+
+## 5. Improvements
+
+## 6. Conclusion
