@@ -6,6 +6,7 @@
 3. [System Design](#3-system-design)
 4. [Testing & Validation](#4-testing--validation)
 5. [Improvements](#5-improvements)
+6. [Conclusion](#6-conclusion)
 
 ## 1. Overview
 
