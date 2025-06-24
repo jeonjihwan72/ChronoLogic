@@ -38,7 +38,7 @@
 ### Stack
 
  <!-- Verilog HDL -->
-<img src="https://img.shields.io/badge/Verilog_HDL-90EE90?style=flat-square&logo=Stack Overflow&logoColor=black"/>
+![verilog hdl](https://img.shields.io/badge/Verilog_HDL-90EE90?style=flat-square&logo=StackOverflow&logoColor=black)
 
 ## 5. Implementation Detail
 
