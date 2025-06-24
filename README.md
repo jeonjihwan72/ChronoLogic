@@ -102,4 +102,18 @@ All test cases passed under normal operating conditions, and the system remained
 
 ## 5. Improvements
 
+- Multiple Alarm Configurations
+- Multiple Alarms Configuration
+- Multiple Types of Alarm Deactivation Missions
+
 ## 6. Conclusion
+
+The ChronoLogic project successfully demonstrates the implementation of a hardware-based alarm clock system, utilizing Verilog HDL and an FPGA platform. The system achieved its primary objective of providing a functional alarm clock with an interactive element, where users must engage actively to deactivate the alarm, moving beyond traditional alarm clock designs.
+
+The design features a real-time clock display, an alarm trigger mechanism, and a mission-based alarm deactivation process, providing a more engaging user experience. The integration of an FND array, piezo buzzer, and multiple logic circuits on the FPGA board effectively met all the functional and non-functional requirements, while offering valuable insights into hardware-level control and digital logic design.
+
+Through rigorous testing, the system was validated for its core functionalities, including time display, alarm activation, and mission-based deactivation. The stable performance during prolonged use confirmed the system's robustness and reliability. Additionally, the project successfully demonstrated the ease of switching between modes, such as clock and alarm settings, providing users with intuitive control.
+
+This project not only helped to deepen the understanding of Verilog-based design but also highlighted the importance of system architecture and real-time functionality in embedded hardware systems. It stands as a foundational step toward more complex projects involving FPGA-based hardware design and embedded systems development.
+
+The lessons learned from this project can be applied to future endeavors in digital logic design, particularly in areas where real-time operations and user interaction are key components. Going forward, improvements can be made by integrating more advanced features like wireless connectivity, personalized alarm sounds, and energy optimization strategies for portable devices.
